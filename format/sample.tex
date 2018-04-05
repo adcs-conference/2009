@@ -1,0 +1,249 @@
+% Template for producing IEEE-format articles using LaTeX.
+% Written by Matthew Ward, CS Department, Worcester Polytechnic Institute.
+% Use at your own risk.  Complaints to /dev/null.
+% Make two column with no page numbering, default is 10 point.
+
+% Adapted by Michael Oudshoorn for the Australasian Computer Science
+% Conference and the Australasian Database Conference 1995.
+
+% Further changes by Rodney Topor, Harald Sondergaard Guozhu Dong,
+% and Alistair Moffat and James Thom for ACSC'96, ADC'96, CATS'96,
+% DASFAA'97, ADCS97, ADCS98, and trivial ones by David Hawking for
+% ADCS99, James Thom for ADCS2002, and Alistair Moffat (again!) for
+% ADCS 2004.
+
+% For versions before LaTeX2e:
+% \documentstyle[sample,twocolumn]{article}
+% (then delete the next two lines).
+
+\documentclass[twocolumn]{article}
+\usepackage{sample}
+
+\bibliographystyle{sample}
+
+\raggedbottom
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\title{Format for ADCS 2009 Papers}
+\author{{\em Author 1}\\[1ex]
+        Department\\Institution\\State Postcode Country\\[1ex]
+        {\em email or url} \and
+        {\em Author~2}\\[1ex]
+        Department\\Institution\\State Postcode Country\\[1ex]
+        {\em email or url}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+
+        \begin{figure}[b]
+	~\\
+        \noindent
+        {\small\raggedright\bf
+        Proceedings of the 14th Australasian 
+	Document Computing Symposium,
+	Sydney, Australia,
+        4 December 2009.
+	Copyright for this article remains with the authors.
+        }
+        \end{figure}
+
+
+\paragraph*{Abstract}
+%IEEE allows italicized abstract
+\noindent
+{\it 
+The abstract should be about 200 words, in a 10-point italic
+font such as Times (preferred) or Computer Modern.
+It should summarise the scope and contribution of the paper in a
+concise and accurate manner without references to other works.
+The title should be centred in a 14-point Roman bold font followed by
+the authors names, affiliations, and either e-mail addresses or home
+page URL.
+Phone and fax numbers should be omitted.
+} 
+
+\paragraph*{Keywords} 
+A list of keywords based on those given in the Call for Papers should
+be included.
+
+
+\section{Overall format}
+
+Papers should be prepared for A4 paper, with 25~mm margins
+(equivalently, the text height should be 247~mm and the width 160~mm),
+using left and right justification, in a 10-point Roman font such as
+Times (preferred) or Computer Modern, in two-column
+format.\footnote{Footnotes may be used and should be in 7 point text,
+  numbered from 1 through the text.}  The gutter between the columns
+should be 5~mm wide.  No page headers, footers or numbers should be
+included.
+
+Citations should be in the IEEE style, for example
+Hoare~\cite{Hoare73}, or Ganapathi and
+Fischer~\cite{GanapathiFischer82}, or Barnes~\cite{Barnes80,Barnes89}.
+
+Do \emph{not} include page numbers in your paper.
+
+%Authors submitting printed copy should number the pages by writing on
+%the back of each page in light pencil.  An 8 page limit on paper
+%length will be strictly enforced for full papers and 3 pages for short
+%papers.
+
+Note that this document is primarily concerned with the
+\emph{appearance} of submitted papers.  Please read the Call for
+Papers for information on the desired \emph{content} of submitted
+papers.
+
+
+\section{Detailed formatting instructions}
+
+Now for some details.
+
+\subsection{Caption at the lower left corner}
+
+The lower left corner of the first page of your paper should include a
+caption showing the name of the conference and the conference dates,
+as is shown in this sample paper.  If your paper is prepared other
+than with {\LaTeX}, please ensure that you duplicate the required
+wording into your paper.
+
+
+\subsection{Section headings}
+
+Section headings should be numbered and be in a 12-point bold
+font, and be in the mixed-case style used in this sample document.
+
+Authors should leave 15~points of space before a section heading and
+5~points of space after it.  The first paragraph of each (sub)section
+should not be indented.  All other paragraphs should be indented by
+5~mm.
+
+Subsection headings should also be in a 12-point bold font.
+
+Subsubsections should not be used.
+
+\subsection{Figures and tables}
+
+Figures and tables should be displayed as near as possible to the
+first reference to them in the text.  Captions should be centered
+below the display and figures and tables should be numbered
+consecutively.
+
+\begin{figure}[htb]
+\hfil
+\hbox{
+\begin{tabular}{|c|}
+\hline
+\\[6mm]
+Insert your figure here\\[10mm]
+\hline
+\end{tabular}\hfil
+}
+\caption{An example figure.}
+\end{figure}
+
+Try to avoid having lots of horizontal and vertical lines in your
+tables---intelligent use of whitespace is far more effective.
+
+\section{\protect{Information for \LaTeX\ users}}
+
+This document \verb+sample.tex+ (and corresponding style files
+\verb+sample.sty+ and \verb+sample.bst+) is available as a {\LaTeX}
+source file via the conference home page:
+
+\begin{center}
+\url{http://es.csiro.au/adcs2009}
+\end{center}
+
+%% For versions before {\LaTeX2e} (such as {\LaTeX}2.09), you should replace
+%% the following two lines
+%% 
+%% \begin{verbatim}
+%% \documentclass[twocolumn]{article}
+%% \usepackage{sample}
+%% \end{verbatim}
+%% 
+%% which are at the beginning of the file \verb+sample.tex+, by the line
+%% 
+%% \begin{verbatim}
+%% \documentstyle[sample,twocolumn]{article}
+%% \end{verbatim}
+%% 
+%% %% Your main \LaTeX\ input file will then have the form:
+%% %% 
+%% %% \begin{verbatim}
+%% %% \documentstyle[sample,twocolumn]{article}
+%% %% \bibliographystyle{sample}
+%% %% \title{My title}
+%% %% \author{See example in sample.tex}
+%% %% \date{}
+%% %% \begin{document}
+%% %% \maketitle
+%% %% \thispagestyle{empty}
+%% %% ...
+%% %% \end{document}
+%% %% \end{verbatim}
+
+\section{Other information}
+
+Some more stuff that you need to know.
+
+\subsection{Submission}
+
+Submissions to ADCS 2009 should be sent according to the directions at
+\url{http://es.csiro.au/adcs2009}.  \emph{Do not send your {\LaTeX}
+  source, or PostScript, or a MS-Word file.  Send only a printable PDF
+  version.}
+
+All submissions must be original work, not previously published 
+elsewhere, and not currently submitted to any other conference or
+journal.
+
+Submissions that differ markedly in length or style from these
+guidelines risk being rejected without further consideration.
+
+\subsection{Submission length}
+
+Submissions of full-length papers should be at most 3000 words, or
+eight pages in this style.  Submissions for Posters, Short papers,
+Industry Status Reports, and Demonstrations should be appoximately
+1500 words long, or four pages in this required style.
+
+\subsection{Timetable}
+
+The deadline for submissions, and the timetable for notifications,
+appears on the conference home page.
+
+\subsection{Registration}
+
+Submission of a paper should be regarded as a commitment that, should
+the paper be accepted, at least one of the authors will attend the
+conference to present the paper.
+
+Registration information will be sent with letters of acceptance, and
+will also be available from the conference home page.
+
+\subsection{Conference information}
+
+General information about the conference may be found at the
+conference home page: 
+
+\begin{center}
+\url{http://es.csiro.au/adcs2009/}
+\end{center}
+
+\paragraph*{Acknowledgements}
+
+Acknowledgements should be placed at the end of the text, rather than
+as footnotes to the title or authors.
+
+\begin{small}
+\bibliography{sample}
+\end{small}
+
+\end{document}

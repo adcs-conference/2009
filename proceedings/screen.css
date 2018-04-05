@@ -1,0 +1,70 @@
+body {
+        color:            #000000;
+        background-color: #FFFFFF;
+}
+
+h2 {
+        color:             #445077;
+}
+
+h3 {
+        color:             #445077;
+}
+
+h4 {
+        color:             #445077;
+}
+
+a:link {
+        text-decoration:   none;
+        color:             #0000EE;
+}
+
+a:visited {
+        text-decoration:   none;
+        color:             #800080;
+}
+
+a:active {
+        text-decoration:   none;
+        color:             #008000;
+}
+
+.menu {
+        float:             left;
+        clear:             left;
+        background-color:  #CCFFFF;
+        width:             17%;
+        margin-top:        2em;
+        margin-right:      2em;
+        margin-left:       2em;
+        margin-bottom:     100em;
+        padding:           1em;
+}
+
+.menushort {
+        float:             left;
+        background-color:  #CCFFFF;
+        width:             17%;
+        margin:            2em;
+        padding:           1em;
+}
+
+.talk {
+        background-color: #D0D0D0;
+}
+
+.footer {
+        font-family:      Verdana, Arial, Helvetica, sans-serif;
+        font-size:        70%;
+        color:            #888888;
+}
+
+.todo {
+        border:		  thin solid red;
+        color:		  #aa2222;
+}
+
+.comlist td {
+	padding-right:	  10px;
+}

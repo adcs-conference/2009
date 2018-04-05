@@ -1,0 +1,95 @@
+%style file for ACSC/ADC/CATS/DASFAA conferences - also for ADCS
+\usepackage{times}
+\usepackage{url}
+\renewcommand{\ttdefault}{cmtt}
+
+%set dimensions of columns, gap between columns, and space between
+%paragraphs etc.
+
+% We assume the use of A4 paper...
+\setlength{\textheight}{247mm}
+\setlength{\columnsep}{5mm}
+\setlength{\textwidth}{160mm}
+\setlength{\parindent}{5mm}
+%\setlength{\footheight}{0mm}
+\setlength{\topmargin}{0mm}
+\setlength{\headheight}{0mm}
+\setlength{\headsep}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\oddsidemargin}{0mm}
+
+\pagestyle{empty}
+
+% Some stuff to force sensible page breaks (no widows etc) and to ensure
+% that each page which consists solely of diagrams is at least 75% full.
+% We also get LaTeX to shut up when vboxes and hboxes are too wide.
+
+\hbadness=10000         % badness above which bad hboxes are shown.
+\vbadness=10000         % badness above which bad vboxes are shown.
+\tolerance=200	       	% badness tolerance after hyphenation.
+\hyphenpenalty=1000 	% penalty for line break after discresionary hyphen.
+\pretolerance=200 	% badness tolerance before hyphenation.
+\clubpenalty=10000	% penalty for creating a club line at end of line.
+\widowpenalty=10000	% penalty for creating a widow line at top of page.
+\displaywidowpenalty=200% penalty for creating a widow line before a display.
+\predisplaypenalty=20	% penalty for a page break just before a display
+\postdisplaypenalty=20	% penalty for a page break just after a display.
+\floatingpenalty=8000	% penalty for insertions that are split.
+\interlinepenalty=25 	% additional penalty for page break between lines.
+
+\renewcommand{\floatpagefraction}{0.65}
+\renewcommand{\textfraction}{0.05}
+\setcounter{topnumber}{4}
+\renewcommand{\topfraction}{0.90}
+\setlength{\textfloatsep}{2mm plus 3.5pt minus 2pt}
+\setlength{\floatsep}{2mm plus 3.5pt minus 2pt}
+\setlength{\intextsep}{2mm plus 3.5pt minus 2pt}
+
+\setlength{\smallskipamount}{6pt plus1pt minus1pt}
+\setlength{\medskipamount}{12pt plus2pt minus1pt}
+\setlength{\bigskipamount}{18pt plus3pt minus1pt}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+\makeatletter
+
+\def\scriptsize{\@setsize\scriptsize{8pt}\viipt\@viipt}
+\def\tiny{\@setsize\tiny{6pt}\vpt\@vpt}
+\def\large{\@setsize\large{12pt}\xiipt\@xiipt}
+\def\Large{\@setsize\Large{14pt}\xivpt\@xivpt}
+\def\LARGE{\@setsize\LARGE{18pt}\xviipt\@xviipt}
+\def\huge{\@setsize\huge{22pt}\xxpt\@xxpt}
+\def\Huge{\@setsize\Huge{25pt}\xxvpt\@xxvpt}
+
+\def\section{\@startsection {section}{1}{\z@}
+  {-15pt plus -3pt minus  -3pt}{5pt plus 2pt}{\large\bf}}
+\def\subsection{\@startsection{subsection}{2}{\z@}
+  {-10pt plus -3pt minus -3pt}{5pt plus 2pt}{\large\bf}}
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}
+  {-10pt plus -3pt minus -2pt}{5pt plus 2pt}{\normalsize\bf}}
+\def\paragraph{\@startsection{paragraph}{4}{\z@}
+  {5pt plus 1pt minus 1pt}{-1em}{\normalsize\bf}}
+\def\subparagraph{\@startsection{subparagraph}{5}{\parindent}
+  {0pt plus 1pt minus 0pt}{-1em}{\normalsize\it}}
+
+%make title bold and 14 pt font (LaTeX default is non-bold, 16 pt)
+
+\def\@maketitle{\newpage
+ \null
+ \vskip 2em
+ \begin{center}%
+  {\Large\bf \@title \par}%
+  \vskip 1.5em
+  {\large
+   \lineskip .5em
+   \begin{tabular}[t]{c}\@author
+   \end{tabular}\par}%
+  \vskip 1em
+  {\large \@date}%
+ \end{center}%
+ \par
+ \vskip 1.5em}
+
+\makeatother
+
